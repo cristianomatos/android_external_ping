@@ -2009,8 +2009,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	if (options & F_TIMESTAMP) {
-	        bzero(rspace, sizeof(rspace));
-		bzero(rsp.rspace, sizeof(rsp.rspace));
+	        bzero(rsp.rspace, sizeof(rsp.rspace));
 	        rsp.rspace[0] = IPOPT_TIMESTAMP;
    		rsp.rspace[1] = (ts_type==IPOPT_TS_TSONLY ? 40 : 36);
     		rsp.rspace[2] = 5;
